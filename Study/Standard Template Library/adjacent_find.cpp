@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <iostream>
 #include <list>
+#include "../Common_Functionality_Implementations/devtools.cpp"
 
 using namespace std;
 
@@ -53,10 +54,16 @@ int main()
         cout << "There are two adjacent values that are thrice and they have a value of: " << * ( result2) << " and " << *(next(result2))
             << " Their indecies are " << index << " and " << index + 1 << endl;
     }
-
+    
     list1.sort();
 
+    cout << "Sorted list1 = (";
+    printListCSV(list1);
+    cout << ")" << endl;
+
     result3 = adjacent_find(list1.begin(),list1.end(), is_thrice);
+
+    
 
     if(result3 == list1.end())
         cout << "There are not two adjacent elements in the sorted list that are thrice each other." << endl;
@@ -65,7 +72,7 @@ int main()
     {
         int index = distance(list1.begin(), result3);
         cout << "There are two adjacent elements in the sorted list that are thrice each other." <<
-            " They have a value of " << *(result3) << " and " << *(next(result3)) <<
+            " They have a value of " << *(result3) << " and " << *(next(result3)) << "." <<
             " Their indecies are at " << index << " and " << index+1 << endl;
     }
 }

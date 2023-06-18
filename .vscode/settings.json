@@ -3,6 +3,9 @@
         "algorithm": "cpp",
         "iostream": "cpp",
         "cmath": "cpp",
-        "list": "cpp"
-    }
+        "list": "cpp",
+        "xstring": "cpp",
+        "vector": "cpp"
+    },
+    "C_Cpp.default.compilerPath": ""
 }

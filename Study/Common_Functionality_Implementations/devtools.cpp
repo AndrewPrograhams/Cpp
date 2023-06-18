@@ -4,17 +4,30 @@
 #include <vector>
 #include <iostream>
 #include <cmath>
-#include "heap.cpp"
+#include <list>
 using namespace std;
 
 //adds proper commas to a string that represents a whole number
-
 string formatNumberCommas(string str)
 {
   size_t startPos = str.length();
   for(int i=startPos-3; i>= 0; i-=3)
     str.insert(i,1,',');
   return str;
+}
+
+
+//prints a comma separated value string representing the contents of a list of generic objects
+template <typename T> void printListCSV(list<T> list)
+{   
+    typename list<T>::iterator iter;
+    for (iter = list.begin(); iter!=list.end(); iter++)
+    {
+        if(iter != prev(list.end()))
+            cout << *iter << ",";
+        else
+            cout << *iter;
+    }
 }
 
 
@@ -94,37 +107,5 @@ int fib(int num)
 
     return y;
 }
-
-
-
-int main(int argc, char *argv[])
-{
-    cout << "argc == " << argc << '\n';
-    
-    // int arr[] = {1,2,3,4,5,6};
-    // swap(arr,2,3);
-    // bubbleSort(arr,6);
-
-    // for(int i=0;i<6;i++)
-    //     cout << arr[i] << endl;
-
-    // cout << fib(6);
-
-    //int arr[] = {1};
-    //cout << is_sorted(arr,1) << endl;
-
-    //string test = "10000000";
-    //cout << formatNumberCommas(test) << endl;
-
-    BHeap h;
-    h.Insert(5);
-    h.Insert(7);
-    h.Insert(1);
-    h.Insert(15);
-    h.showHeap();
-    
-    return argc == 3 ? EXIT_SUCCESS : EXIT_FAILURE; // optional return value
-}
-
 
 
