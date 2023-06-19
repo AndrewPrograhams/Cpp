@@ -5,7 +5,9 @@
         "cmath": "cpp",
         "list": "cpp",
         "xstring": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "xutility": "cpp",
+        "ostream": "cpp"
     },
     "C_Cpp.default.compilerPath": ""
 }
