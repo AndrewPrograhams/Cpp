@@ -63,6 +63,4 @@ int main()
     }
 
     cout << ")" << endl;
-    
-
 }
