@@ -2,6 +2,7 @@
 #include <vector>
 #include <iostream>
 #include <string>
+#include "../../DevTools/devtools.cpp"
 
 using namespace std;
 
@@ -23,3 +24,10 @@ class MultValue
         elem*=Factor;
     }
 };
+
+int main()
+{
+    vector<int> v = {1,2,3,4,5};
+    for_each(v.begin(),v.end(),MultValue<int>(-3));
+    printListCSV(v);
+}

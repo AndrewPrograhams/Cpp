@@ -3,6 +3,8 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
+#include "../../DevTools/devtools.cpp"
+
 using namespace std;
 // The function object multiplies an element by a Factor
 template <class Type>
@@ -19,7 +21,6 @@ public:
     void operator( ) ( Type& elem ) const
     {
         elem *= Factor;
-        cout << elem;
     }
 };
 
@@ -53,8 +54,16 @@ public:
 int main()
 {
     using namespace std;
-    MultValue<int> a(-2); //A MultValue factor that multiplies another element by -2
-    int c = 5;
-    int &d = c;
-    a.operator()(d);
+    // MultValue<int> a(-2); //A MultValue factor that multiplies another element by -2
+    // int c = 5;
+    // int &d = c;
+    // a.operator()(d);
+    
+    vector<int> a = {1,2,3,4,5};
+    for_each_n(a.begin(),3,MultValue<int>(-3));
+
+    printListCSV(a);
+    
+    
+
 }

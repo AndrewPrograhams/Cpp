@@ -7,16 +7,6 @@
 #include <list>
 using namespace std;
 
-//adds proper commas to a string that represents a whole number
-string formatNumberCommas(string str)
-{
-  size_t startPos = str.length();
-  for(int i=startPos-3; i>= 0; i-=3)
-    str.insert(i,1,',');
-  return str;
-}
-
-
 //prints a comma separated value string representing the contents of a list of generic objects
 template <typename T> void printListCSV(list<T> list)
 {   
@@ -29,6 +19,56 @@ template <typename T> void printListCSV(list<T> list)
             cout << *iter;
     }
 }
+
+template <typename T> void printListCSV(vector<T> v)
+{
+    typename vector<T>::iterator stl = prev(v.end());
+
+    for(auto Iter=v.begin();Iter!=v.end();++Iter){
+        if(Iter!=stl)
+            cout << *Iter << ",";
+        else
+            cout << *Iter << endl;
+    }
+}
+
+template <typename T> void printListCSV(T a[])
+{
+    if(a.length() == 0)
+    {
+        cout << "Array is empty." << endl;
+        return;
+    }
+    else if(a.length() == 1)
+    {
+        cout << a[0] << endl;
+        return;
+    }
+    for(int i=0;i<a.length();i++)
+    {
+        if(i==a.length()-1)
+            cout << a[i];
+        else
+            cout << a[i] << ",";
+    }
+}
+
+template <typename T> void print_t(T val)
+{
+    cout << val;
+}
+
+//adds proper commas to a string that represents a whole number
+string formatNumberCommas(string str)
+{
+  size_t startPos = str.length();
+  for(int i=startPos-3; i>= 0; i-=3)
+    str.insert(i,1,',');
+  return str;
+}
+
+
+
 
 
 //Splits a string based on a delimiter
@@ -51,11 +91,25 @@ int roundFloat(float dou)
     return round(dou);
 }
 
-void swap(int arr[], int index_one, int index_two)
+template<typename Type> void swap(Type arr[], int index_one, int index_two)
 {
-    int temp = arr[index_one];
+    Type one = arr[index_one];
     arr[index_one] = arr[index_two];
-    arr[index_two] = temp;
+    arr[index_two] = one;
+}
+
+template<typename Type> void swap(vector<Type> v, int index_one, int index_two)
+{
+    Type one = v[index_one];
+    v[index_one] = v[index_two];
+    v[index_two] = one;
+}
+
+template<typename Type> void swap(list<Type> l, int index_one, int index_two)
+{
+    Type one = l[index_one];
+    l[index_one] = l[index_two];
+    l[index_two] = one;
 }
 
 bool is_sorted(int arr[], int arrLength)
@@ -107,5 +161,3 @@ int fib(int num)
 
     return y;
 }
-
-
