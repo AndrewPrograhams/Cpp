@@ -51,7 +51,11 @@
         "xmemory": "cpp",
         "xstddef": "cpp",
         "xtr1common": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "random": "cpp",
+        "ratio": "cpp",
+        "stop_token": "cpp",
+        "mutex": "cpp"
     },
     "C_Cpp.default.compilerPath": ""
 }
