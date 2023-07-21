@@ -7,6 +7,8 @@
 
 using namespace std;
 
+//all_of returns true if all elements in the provided range satisfy the predicate
+
 int main()
 {
     list<int> L;

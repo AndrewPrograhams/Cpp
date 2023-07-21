@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <iostream>
 #include <list>
+#include <vector>
 #include "../../DevTools/devtools.cpp"
 
 using namespace std;
@@ -10,7 +11,7 @@ bool is_thrice (int elem1, int elem2)
     return elem1*3 == elem2;
 }
 
-int main()
+void funcT()
 {
     list<int> list1;
     list<int>::iterator Iter;
@@ -75,4 +76,15 @@ int main()
             " They have a value of " << *(result3) << " and " << *(next(result3)) << "." <<
             " Their indecies are at " << index << " and " << index+1 << endl;
     }
+}
+
+//Adjacent find returns the index of the element that matches the provided equality operation in the position after it.
+
+int main()
+{
+    vector<int> v = {5,10,15,20,25,75};
+
+    vector<int>::iterator adjIterator = std::adjacent_find(v.begin(),v.end(),is_thrice);
+
+    cout << distance(v.begin(),adjIterator) << endl;
 }

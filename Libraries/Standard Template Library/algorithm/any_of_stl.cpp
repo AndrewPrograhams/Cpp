@@ -5,6 +5,8 @@
 
 using namespace std;
 
+
+
 int main()
 {
     list<string> L;

@@ -55,7 +55,27 @@
         "random": "cpp",
         "ratio": "cpp",
         "stop_token": "cpp",
-        "mutex": "cpp"
+        "mutex": "cpp",
+        "array": "cpp",
+        "*.tcc": "cpp",
+        "chrono": "cpp",
+        "codecvt": "cpp",
+        "condition_variable": "cpp",
+        "cstdarg": "cpp",
+        "cwctype": "cpp",
+        "map": "cpp",
+        "memory_resource": "cpp",
+        "numeric": "cpp",
+        "optional": "cpp",
+        "source_location": "cpp",
+        "string_view": "cpp",
+        "future": "cpp",
+        "iomanip": "cpp",
+        "numbers": "cpp",
+        "semaphore": "cpp",
+        "sstream": "cpp",
+        "cinttypes": "cpp",
+        "variant": "cpp"
     },
     "C_Cpp.default.compilerPath": ""
 }
