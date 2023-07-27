@@ -109,9 +109,6 @@ string MaximalSquare(string strArr[], int arrLength) {
 
   int rowLength = strArr[0].length();
 
-
-
-
   for(int i=0;i<arrLength;i++)
   {
     for(int j=0;j<rowLength;j++)
