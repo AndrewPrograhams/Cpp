@@ -28,7 +28,7 @@ bool isWithinBounds(int** matrix, int arrLength, int i, int j, int rowLength)
   bool withinBounds = i >= 0 && i<arrLength && j >= 0 && j < rowLength;
   
   if(withinBounds)
-  {
+  { 
     withinBounds = matrix[i][j] == 1;
   }
   return withinBounds; 

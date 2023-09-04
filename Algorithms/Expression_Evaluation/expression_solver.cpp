@@ -44,14 +44,18 @@ int expression_solver::process_expression()
 {
     int term = process_term();
     if(symbol == '/' )
+    {
+
+    }
+    return 0;
 }
 
 int expression_solver::process_term()
 {
-
+    return 0;
 }
 
 int expression_solver::process_factor()
 {
-
+    return 0;
 }
