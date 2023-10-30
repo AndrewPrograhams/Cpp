@@ -1,0 +1,4 @@
+1. Code a class to represent a complex type. Overload its basic arithmetic operators. Define it's +=, etc. operators.
+
+2. Code the following classes, Shape, Triangle, Square, Circle, and Smiley. Use proper abstraction.
+
