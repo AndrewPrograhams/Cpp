@@ -1,4 +1,16 @@
 1. Code a class to represent a complex type. Overload its basic arithmetic operators. Define it's +=, etc. operators.
+-Use doubles as its real and imaginary parts
+-Make three constructors, none provided parts should be initialized to 0.
+    -Real and imaginary parts provided
+    -Real provided
+    -Neither provdied
 
-2. Code the following classes, Shape, Triangle, Square, Circle, and Smiley. Use proper abstraction.
+2. Add the following functionality to the Vector container class defined thus far. Assume push_back has been defined elsewhere.
+-A working destructor
+-Initialize all elements of the container to 0
+-A read(&istream s) function that sets values based on user input. Assume a default constructor for v exists. Comment out this code.
+-A constructor that initializes from a {}-type expression. Use inlining to define this constructor. Use the copy() function from <algorithm>
+
+3. Code the following classes, Shape, Triangle, Square, Circle, and Smiley. Use proper abstraction.
+-include interface functions for rotation, draw, 
 
