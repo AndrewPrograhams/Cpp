@@ -11,6 +11,16 @@
 -A read(&istream s) function that sets values based on user input. Assume a default constructor for v exists. Comment out this code.
 -A constructor that initializes from a {}-type expression. Use inlining to define this constructor. Use the copy() function from <algorithm>
 
-3. Code the following classes, Shape, Triangle, Square, Circle, and Smiley. Use proper abstraction.
--include interface functions for rotation, draw, 
+3. Code a simple container interface. 
+-
+
+4. Code the following classes, Shape, Triangle, Square, Circle, and Emoji. Use proper abstraction.
+-Include relevent constructors.
+-Abstract class shape should have pure virtual functions only.
+-include interface functions for rotate, draw, center, and move.
+
+Test questions.
+
+1. What overhead does a virtual method have?
+
 

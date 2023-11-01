@@ -1,4 +1,4 @@
-#include "Vector.h";
+#include "Vector.h"
 
 using namespace std;
 
@@ -8,15 +8,13 @@ double& Vector::operator[](int i)
     return elem[i];
 }
 
-// Vector& Vector::read(istream& is)
-// {
-//     for(double d; is>>d;)
-//        push_back(d);
-
-//    return *this;
-// }
-
 int Vector::size() const
 {
     return sz;
+}
+
+int main()
+{
+    Vector v ={1.0,2.0,3.0,4.0,5.0};
+    cout << v[2];
 }
